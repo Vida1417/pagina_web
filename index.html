@@ -35,12 +35,51 @@
 
     <!-- Sección Menú (visible por defecto) -->
     <section class="seccion activa" id="seccion-menu">
-      <!-- Se rellena en la rama feature/body -->
+      <h1 class="seccion__titulo">Nuestro Menú</h1>
+      <p class="seccion__intro">Toca un plato para ver más detalles.</p>
+
+      <ul class="platos" id="lista-platos">
+        <!-- Los platos se generan desde js/body.js -->
+      </ul>
     </section>
 
     <!-- Sección Nosotros -->
     <section class="seccion" id="seccion-nosotros">
-      <!-- Se rellena en la rama feature/body -->
+      <h1 class="seccion__titulo">Nuestra Historia</h1>
+
+      <article class="historia">
+        <p>
+          <strong>La Buena Mesa</strong> nació en 1998 en el corazón de la ciudad,
+          fundada por la familia Rodríguez con una idea simple: cocinar con
+          ingredientes frescos del mercado y tratar a cada cliente como en casa.
+        </p>
+        <p>
+          Lo que empezó como un pequeño local de 8 mesas se convirtió, con los
+          años, en un referente de la cocina tradicional de la región. Mantenemos
+          las recetas originales de la abuela Marta, actualizadas con técnicas
+          modernas sin perder la esencia.
+        </p>
+        <p>
+          Hoy, más de 25 años después, seguimos creyendo que una buena comida
+          se disfruta mejor en buena compañía. Por eso te recibimos con la misma
+          calidez del primer día.
+        </p>
+      </article>
+
+      <div class="valores">
+        <div class="valor">
+          <h3>Ingredientes frescos</h3>
+          <p>Compramos cada mañana en el mercado local.</p>
+        </div>
+        <div class="valor">
+          <h3>Recetas de familia</h3>
+          <p>Tres generaciones cocinando lo mismo con amor.</p>
+        </div>
+        <div class="valor">
+          <h3>Atención cercana</h3>
+          <p>Aquí no eres un cliente, eres un invitado.</p>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -69,7 +108,13 @@
 
   <!-- Modal de Plato → rama body -->
   <div class="modal-overlay" id="modal-plato" aria-hidden="true">
-    <!-- Se rellena en la rama feature/body -->
+    <div class="modal modal--plato" role="dialog" aria-modal="true" aria-labelledby="titulo-plato">
+      <button class="modal-cerrar" aria-label="Cerrar">&times;</button>
+      <img id="plato-imagen" class="plato__imagen-modal" src="" alt="">
+      <h2 id="titulo-plato"></h2>
+      <p class="plato__precio" id="plato-precio"></p>
+      <p id="plato-descripcion"></p>
+    </div>
   </div>
 
   <!-- Scripts -->
