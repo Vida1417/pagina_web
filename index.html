@@ -16,8 +16,17 @@
        HEADER / NAVBAR  → rama: feature/navbar
        ============================================ -->
   <header class="navbar" id="navbar">
-    <!-- Se rellena en la rama feature/navbar -->
-  </header>
+  <div class="navbar__contenedor">
+    <a href="#" class="navbar__logo">La Buena Mesa</a>
+    <nav class="navbar__nav" aria-label="Menú principal">
+      <ul>
+        <li><a href="#" class="navbar__link activo" data-seccion="menu">Menú</a></li>
+        <li><a href="#" class="navbar__link" data-seccion="nosotros">Nosotros</a></li>
+        <li><a href="#" class="navbar__link" data-modal="modal-reserva">Reservas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <!-- ============================================
        BODY / MAIN  → rama: feature/body
@@ -49,7 +58,13 @@
 
   <!-- Modal de Reservas → rama navbar -->
   <div class="modal-overlay" id="modal-reserva" aria-hidden="true">
-    <!-- Se rellena en la rama feature/navbar -->
+    <div class="modal modal--reserva" role="dialog" aria-modal="true" aria-labelledby="titulo-reserva">
+      <button class="modal-cerrar" aria-label="Cerrar">&times;</button>
+      <h2 id="titulo-reserva">Reservas</h2>
+      <p>Lo sentimos, por el momento <strong>todas nuestras mesas están agotadas</strong>.</p>
+      <p>Te invitamos a volver a intentarlo más adelante.</p>
+      <button class="btn btn--primario" data-cerrar-modal>Entendido</button>
+    </div>
   </div>
 
   <!-- Modal de Plato → rama body -->
